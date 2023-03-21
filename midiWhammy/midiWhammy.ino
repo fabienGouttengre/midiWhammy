@@ -6,8 +6,8 @@
 
 // the setup function runs once when you press reset or power the board
 
-#include <Arduino.h>
-
+#include "config.h"
+#include "led.h"
 
 void setup() {
 
