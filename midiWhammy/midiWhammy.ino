@@ -18,6 +18,7 @@ void setup() {
 
 	Led led;
 	led.SetPinModeBoard();
+	led.Loop(2);
 
 }
 

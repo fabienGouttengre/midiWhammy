@@ -2,6 +2,7 @@
 
 #include "led.h"
 #include "config.h"
+#include <Arduino.h>
 
 
 Led::Led() {
