@@ -10,6 +10,14 @@
 #include "led.h"
 
 void setup() {
+	Serial.begin(31250);//31250
+	// Serial.begin(9600);
+	pinMode(START, INPUT);
+	pinMode(UP, INPUT);
+	pinMode(DOWN, INPUT);
+
+	Led led;
+	led.SetPinModeBoard();
 
 }
 

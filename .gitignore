@@ -61,3 +61,5 @@
 midiWhammy/.vs/midiWhammy/v17/.suo
 midiWhammy/src/arduino folders read me.txt
 midiWhammy/.vscode/arduino.json
+midiWhammy/__vm/.midiWhammy.vsarduino.h
+*.xml

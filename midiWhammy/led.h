@@ -12,6 +12,19 @@ public:
 	Led();
 	void SetBoard(const int ledProgram[10], const int ledPrgm[10]);
 	void SetPinModeBoard();
+
+	void AllMode(int);
+	void AllPrograme(int);
+	void AllProgrameOff();
+	void AllModeOff();
+	void AllProgrameOn();
+	void AllModOn();
+	void AllOff();
+	void AllOn();
+
+	void Loop(int );
+	void ProgrameSelect(int);
+
 };
 
 
