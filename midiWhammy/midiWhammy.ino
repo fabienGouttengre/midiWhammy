@@ -12,14 +12,12 @@
 void setup() {
 	Serial.begin(31250);
 
-	Serial.println("start");
 	pinMode(START, INPUT);
 	pinMode(UP, INPUT);
 	pinMode(DOWN, INPUT);
 
 	Led::SetPinModeBoard();
 	Led::Loop(3);
-	Serial.println("fin");
 }
 
 // the loop function runs over and over again until power down or reset
