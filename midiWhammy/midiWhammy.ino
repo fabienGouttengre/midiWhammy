@@ -5,6 +5,7 @@
 */
 
 // the setup function runs once when you press reset or power the board
+#include "midi.h"
 #include <Arduino.h>
 
 #include "config.h"
@@ -17,6 +18,9 @@ void setup() {
 
 	Led::SetPinModeBoard();
 	Button::SetPin();
+	Midi::SendTreadValue(100);
+	Midi::SendPrograme(2);
+
 	Led::Loop(3);
 }
 
