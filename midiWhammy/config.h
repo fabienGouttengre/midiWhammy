@@ -12,9 +12,10 @@
 #define DLY_FIN 100000000
 #define MIN 0
 #define MAX 127
-#define START 2
-#define UP 3
-#define DOWN 4
+
+#define BUTTON_START 2
+#define BUTTON_UP 3
+#define BUTTON_DOWN 4
 
 #define LED_PROGRAMME_1 35
 #define LED_PROGRAMME_2 37
@@ -37,6 +38,10 @@
 #define LED_MODE_8 48
 #define LED_MODE_9 50
 #define LED_MODE_10 52
+
+#define TIME_CHECK_BUTTON 100
+
+
 
 const int ledProgram[10] = { 35,37,39,41,43,45,47,49,51,53 }; // Configuration des leds pour sélectionner les programmes.
 const int ledMode[10] = { 34,36,38,40,42,44,46,48,50,52 }; // Configuration des leds pour sectionner les configurations.
