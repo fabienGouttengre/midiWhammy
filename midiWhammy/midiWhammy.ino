@@ -20,8 +20,6 @@ void setup() {
 
 	Led::SetPinModeBoard();
 	Button::SetPin();
-	Midi::SendTreadValue(100);
-	Midi::SendPrograme(2);
 
 	Led::Loop(3);
 }
