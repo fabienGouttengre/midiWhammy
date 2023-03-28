@@ -73,12 +73,12 @@
 	 for (int j = 0; j < nLoop; j++) {
 		 for (int i = 0; i < 10; i++) {
 			 analogWrite(Led::board[0][i], 255);
-			 delay(DLYLED);
+			 delay(DLY_LED_LOOP);
 			 analogWrite(Led::board[0][i], 0);
 		 }
 		 for (int i = 10; i > 0; i--) {
 			 analogWrite(Led::board[1][i - 1], 255);
-			 delay(DLYLED);
+			 delay(DLY_LED_LOOP);
 			 analogWrite(Led::board[1][i - 1], 0);
 		 }
 	 }
