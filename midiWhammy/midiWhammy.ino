@@ -12,6 +12,8 @@
 
 #include "button.h"
 #include "led.h"
+int programeSelecte = 1;
+void demarragepgrm();
 
 void setup() {
 	Serial.begin(31250);
@@ -26,5 +28,40 @@ void setup() {
 
 // the loop function runs over and over again until power down or reset
 void loop() {
+    if (Button::Check(BUTTON_START)) {
+        demarragepgrm();
+    }
+    else if (Button::Check(BUTTON_UP)) {
+        Led::ProgrammeOff(programeSelecte);
+        if (programeSelecte == 10) {
+            programeSelecte = 1;
+        }else{
+            programeSelecte ++;
+        }
+    }
+    else if (Button::Check(BUTTON_DOWN)) {
+        Led::ProgrammeOff(programeSelecte);
+        if (programeSelecte == 1) {
+            programeSelecte = 10;
+        }
+        else {
+            programeSelecte -- ;
+        }
+    }
+    // led correspondante au programme 
+    Led::ProgrammeOn(programeSelecte);
+}
 
+void demarragepgrm() {
+    switch (programeSelecte) {
+    case 1:
+        break;
+    default:
+        for (int i = 0; i < 3; i++) {
+            Led::AllOn();
+            delay(100);
+            Led::AllOff();
+            delay(100);
+        }
+    }
 }

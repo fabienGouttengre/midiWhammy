@@ -23,6 +23,9 @@ public:
 
 	static void Loop(int );
 	static void ProgrammeSelect(int);
+
+	static void ProgrammeOn(int);
+	static void ProgrammeOff(int);
 };
 
 

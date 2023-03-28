@@ -97,3 +97,10 @@
 		 }
 	 }
  }
+
+ void Led::ProgrammeOn(int numPrograme) {
+	 analogWrite(Led::board[0][numPrograme - 1], 255);
+ }
+ void Led::ProgrammeOff(int numPrograme) {
+	 analogWrite(Led::board[0][numPrograme - 1], 0);
+ }
