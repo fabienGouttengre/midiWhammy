@@ -5,14 +5,13 @@
 
 #define MAXPROGRAME 21 // Nombre de programmes disponibles sur la pedal commence à 1
 
-#define DLYLED 30
+#define TREAD_VALUE_MAX 127
+#define TREAD_VALUE_MIN 0
+
+#define TIME_CHECK_BUTTON 100
+#define TIME_RUN_FOR_TREAD 48 
+
 #define DLY_LED_LOOP 20
-#define DLY_MAP_1 119 // 125 BPM
-#define DLY_MAP_2 920 // Presision
-#define DLY_UNSUSTAINABLE 1000000/(135/60) // 135 BPM
-#define DLY_FIN 100000000
-#define MIN 0
-#define MAX 127
 
 #define BUTTON_START 2
 #define BUTTON_UP 3
@@ -45,11 +44,6 @@
 
 #define TIME_CHECK_BUTTON 100
 #define TIME_RUN_FOR_TREAD 48 
-
-
-
-const int ledProgram[10] = { 35,37,39,41,43,45,47,49,51,53 }; // Configuration des leds pour sélectionner les programmes.
-const int ledMode[10] = { 34,36,38,40,42,44,46,48,50,52 }; // Configuration des leds pour sectionner les configurations.
 
 
 #endif // _CONFIG

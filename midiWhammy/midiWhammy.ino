@@ -20,9 +20,8 @@ void demarragepgrm();
 Song song = Song(0, 0);
 
 void setup() {
-        
-	Serial.begin(31250);
 
+    Midi::SetMidi();
 	Led::SetPinModeBoard();
 	Button::SetPin();
 
@@ -73,4 +72,32 @@ void demarragepgrm() {
             delay(100);
         }
     }
+}
+void Whammy_Preset() {
+    int program = 0;
+    while (true) {
+        Led::ProgrammeSelect(program + 1);
+        if (Button::Check(BUTTON_START)) {
+            break;
+        }
+        if (Button::Check(BUTTON_UP)) {
+            if (program == MAXPROGRAME - 1) {
+                program = 1;
+            }
+            else {
+                program++;
+            }
+            Midi::SendPrograme(program);
+        }
+        else if (Button::Check(BUTTON_DOWN)) {
+            if (program == 0) {
+                program = MAXPROGRAME - 1;
+            }
+            else {
+                program--;
+            }
+            Midi::SendPrograme(program);
+        }
+    }
+    Led::AllProgrammeOff();
 }

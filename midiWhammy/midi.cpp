@@ -5,6 +5,9 @@
 #include "midi.h"
 
 #include <Arduino.h>
+void Midi::SetMidi() {
+	Serial.begin(31250);
+}
 
 void Midi::SendTreadValue(int treadValue) {
 		Serial.write((uint8_t)0xB0); //TYPE: control change
