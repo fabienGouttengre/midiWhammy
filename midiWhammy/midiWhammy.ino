@@ -57,12 +57,7 @@ void loop() {
 void demarragepgrm() {
     switch (programeSelecte) {
     case 1:
-        long timeInitial = micros();
-        for (int i = 0; i < 8; i++) {
-            Serial.println(micros() - timeInitial);
-        }
-        Serial.println(micros() - timeInitial);
-
+        Whammy_Preset();
         break;
     default:
         for (int i = 0; i < 3; i++) {
