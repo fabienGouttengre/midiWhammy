@@ -40,7 +40,11 @@
 #define LED_MODE_9 50
 #define LED_MODE_10 52
 
+#define TREAD_VALUE_MAX 127
+#define TREAD_VALUE_MIN 0
+
 #define TIME_CHECK_BUTTON 100
+#define TIME_RUN_FOR_TREAD 48 
 
 
 

@@ -5,23 +5,28 @@
 */
 
 // the setup function runs once when you press reset or power the board
+#include "song.h"
 #include "midi.h"
+#include "button.h"
+#include "led.h"
 #include <Arduino.h>
 
 #include "config.h"
 
-#include "button.h"
-#include "led.h"
+
 int programeSelecte = 1;
 void demarragepgrm();
 
+Song song = Song(0, 0);
+
 void setup() {
+        
 	Serial.begin(31250);
 
 	Led::SetPinModeBoard();
 	Button::SetPin();
 
-	Led::Loop(3);
+	Led::Loop(0);
 }
 
 // the loop function runs over and over again until power down or reset
@@ -53,6 +58,12 @@ void loop() {
 void demarragepgrm() {
     switch (programeSelecte) {
     case 1:
+        long timeInitial = micros();
+        for (int i = 0; i < 8; i++) {
+            Serial.println(micros() - timeInitial);
+        }
+        Serial.println(micros() - timeInitial);
+
         break;
     default:
         for (int i = 0; i < 3; i++) {
