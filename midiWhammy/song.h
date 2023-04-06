@@ -5,12 +5,12 @@
 class Song
 {
 public:
-	Song(int, int);
-	void test(int, int, int );
+	Song(int);
+	void treadSlide(int, int, int );
 	void setStartTime();
 	void noteUp();
-	void noteNexte(int);
-
+	void noteNexte(int repetition = 1);
+	void sendProgrameTread(int, int);
 private:
 	int bpm = 0;
 	int timeSongInSegond = 0;

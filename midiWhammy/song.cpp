@@ -8,12 +8,12 @@
 #include "song.h"
 #include "midi.h"
 
-Song::Song(int bpm, int timeSongInSegond) : bpm(bpm), timeSongInSegond(timeSongInSegond)
+Song::Song(int bpm) : bpm(bpm), timeSongInSegond(timeSongInSegond)
 {
 }
 
 void Song::setStartTime() {
-	song.startTime = micros();
+	startTime = micros();
 }
 
 void Song::noteUp() {
@@ -29,7 +29,7 @@ void Song::noteNexte(int repetition = 1) {
 	}
 }
 
-void Song::test(int time, int valueStart ,int valueEnd) {
+void Song::treadSlide(int time, int valueStart ,int valueEnd) {
 	int rep = (time / TIME_RUN_FOR_TREAD);
 	int decal = (valueStart > valueEnd ? (valueStart - valueEnd) : (valueEnd - valueStart));
 	if (rep > decal) {
@@ -50,6 +50,9 @@ void Song::test(int time, int valueStart ,int valueEnd) {
 	}
 	Midi::SendTreadValue(valueEnd);
 }
- 
+void Song::sendProgrameTread(int nuberPrograme , int valueTread) {
+	Midi::SendPrograme(nuberPrograme);
+	Midi::SendTreadValue(valueTread);
+}
 
 
