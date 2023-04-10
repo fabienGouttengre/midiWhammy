@@ -4,7 +4,7 @@
 
 #include <Arduino.h>
 #include "button.h"
-#include "config.h"
+#include "../config.h"
 
 void Button::SetPin() {
 	pinMode(BUTTON_START, INPUT);

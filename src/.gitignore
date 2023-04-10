@@ -65,7 +65,3 @@ midiWhammy/__vm/.midiWhammy.vsarduino.h
 *.xml
 simulation/midiWhammy.hex
 test/testSongLoop/ConsoleApplication1/.vs/ConsoleApplication1/v17/.suo
-.vscode/tasks.json
-.vs/ProjectSettings.json
-.vs/slnx.sqlite
-__vm/.midiWhammy.vsarduino.h

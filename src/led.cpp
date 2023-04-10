@@ -1,8 +1,7 @@
 // led.cpp
 #include <Arduino.h>
 #include "led.h"
-#include "config.h"
-#include <Arduino.h>
+#include "../config.h"
 
  int Led::board[2][10] = { 
 		LED_PROGRAMME_1 ,

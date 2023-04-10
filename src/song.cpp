@@ -8,7 +8,7 @@
 #include "song.h"
 #include "midi.h"
 #include "led.h"
-#include "config.h"
+#include "../config.h"
 
 Song::Song(int bpm) :
     bpm(bpm),
@@ -17,10 +17,10 @@ Song::Song(int bpm) :
 }
 
 void Song::playNote(NoteType note, int numberProgram = -1, int treadValue = -1, int delaySlide = 0) {
-    if (numberProgram != -1 or numberProgram != lastPtogram) {
+    if (numberProgram != -1 || numberProgram != lastPtogram) {
         Midi::SendPrograme(numberProgram);
     }
-    if (treadValue != -1 and treadValue != lasTreadValue) {
+    if (treadValue != -1 && treadValue != lasTreadValue) {
         if (delaySlide != 0) {
             treadSlide(delaySlide, lasTreadValue, treadValue);
         }

@@ -1,4 +1,5 @@
-#include "song.h"
+#include "./src/song.h"
+#include "config.h"
 
 void Music_Example() {
 

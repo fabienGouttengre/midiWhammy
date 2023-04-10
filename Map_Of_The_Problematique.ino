@@ -1,4 +1,5 @@
-#include "song.h"
+#include "./src/song.h"
+#include "config.h"
 
 void Map_Of_The_Problematique() {
 	Song* song = new Song(125);

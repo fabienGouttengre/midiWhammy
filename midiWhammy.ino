@@ -5,10 +5,10 @@
 */
 
 // the setup function runs once when you press reset or power the board
-#include "song.h"
-#include "midi.h"
-#include "button.h"
-#include "led.h"
+#include "./src/song.h"
+#include "./src/midi.h"
+#include "./src/button.h"
+#include "./src/led.h"
 #include <Arduino.h>
 
 #include "config.h"
