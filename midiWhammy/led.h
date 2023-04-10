@@ -26,6 +26,8 @@ public:
 
 	static void ProgrammeOn(int);
 	static void ProgrammeOff(int);
+
+	static void Metronome(int);
 };
 
 

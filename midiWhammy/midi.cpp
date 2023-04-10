@@ -3,8 +3,8 @@
 // 
 
 #include "midi.h"
-
 #include <Arduino.h>
+
 void Midi::SetMidi() {
 	Serial.begin(31250);
 }

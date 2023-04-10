@@ -28,6 +28,11 @@
 		LED_MODE_10
 	 };
     
+ void Led::Metronome(int numberHundredTwentyEighthNote) {
+	 analogWrite(Led::board[1][(((numberHundredTwentyEighthNote / 32)-1) % 10)], 0);
+	 analogWrite(Led::board[1][((numberHundredTwentyEighthNote / 32) % 10)], 255);
+}
+
  void Led::SetPinModeBoard() {
 	 for (int i = 0; i < 2; i++) {
 		 for (int j = 0; j < 10; j++) {

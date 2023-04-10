@@ -16,8 +16,8 @@
 
 int programeSelecte = 1;
 void demarragepgrm();
+void Whammy_Preset();
 
-Song song = Song(0, 0);
 
 void setup() {
 
@@ -58,6 +58,33 @@ void demarragepgrm() {
     switch (programeSelecte) {
     case 1:
         Whammy_Preset();
+        break;
+    case 2:
+        MUSIC_1();
+        break;
+    case 3:
+        MUSIC_2();
+        break;
+    case 4:
+        MUSIC_3();
+        break;
+    case 5:
+        MUSIC_4();
+        break;
+    case 6:
+        MUSIC_5();
+        break;
+    case 7:
+        MUSIC_6();
+        break;
+    case 8:
+        MUSIC_7();
+        break;
+    case 9:
+        MUSIC_8();
+        break;
+    case 10:
+        MUSIC_9();
         break;
     default:
         for (int i = 0; i < 3; i++) {
