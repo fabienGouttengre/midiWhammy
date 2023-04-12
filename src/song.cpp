@@ -84,16 +84,20 @@ void Song::treadSlide(int time, int valueStart ,int valueEnd) {
 	int breakTime = ((time / rep) == 0 ? (time / rep) - TIME_RUN_FOR_TREAD : 0);
 	if (valueStart < valueEnd) {
 		for (int i = valueStart; i < valueEnd; i += pas) {
-            Midi::SendTreadValue(i);
+            Serial.write((uint8_t)0xB0);
+            Serial.write((uint8_t)0x0B);
+            Serial.write((uint8_t)i);
+            delayMicroseconds(breakTime);
 		}
 	}
 	else {
 		for (int i = valueStart; i > valueEnd; i -= pas) {
-			Midi::SendTreadValue(i);
+            Serial.write((uint8_t)0xB0);
+            Serial.write((uint8_t)0x0B);
+            Serial.write((uint8_t)i);
             delayMicroseconds(breakTime);
 		}
 	}
-    Serial.println(micros() - lastTimer);
     lasTreadValue = valueEnd;
 	Midi::SendTreadValue(valueEnd);
 
