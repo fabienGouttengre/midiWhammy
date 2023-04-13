@@ -47,8 +47,7 @@
 
 	#define TREAD_VALUE_MAX 127
 	#define TREAD_VALUE_MIN 0
-	#define TIME_RUN_FOR_TREAD 24
-
+	#define TIME_RUN_FOR_TREAD 830
 	#define TIME_CHECK_BUTTON 100
 
 	#define DLY_LED_LOOP 20

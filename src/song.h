@@ -22,24 +22,27 @@ public:
 	{
 		test,test2,test3
 	};
-	void treadSlide(int, int, int );
+	void treadSlide(long, int, int );
 	void noteUpHundredTwentyEighth();
 	void sendProgrameTread(int, int);
 
 	void nextNote(NoteType note, int repetition = 1);
 
-	void playNote(NoteType note, int numberProgram = -1, int treadValue = -1, int delaySlide = 0);
+	void playNote(
+		NoteType note,
+		int numberProgram = -1,
+		int treadValue = -1,
+		long delaySlide = 0
+	);
 
 private:
-
+	void TreadValueTimer( int , int);
 	int bpm = 0;
 	int numberHundredTwentyEighthNote = 0;
-	long startTime = 0;
+	long int startTime = 0;
 
 	int lastPtogram = 0;
 	int lasTreadValue = 0;
-
-	long lastTimer = 0;
 
 };
 

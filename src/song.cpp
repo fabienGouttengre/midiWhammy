@@ -16,7 +16,7 @@ Song::Song(int bpm) :
 {
 }
 
-void Song::playNote(NoteType note, int numberProgram = -1, int treadValue = -1, int delaySlide = 0) {
+void Song::playNote(NoteType note, const int numberProgram = -1, const int treadValue = -1,const long delaySlide = 0) {
     if (numberProgram != -1 || numberProgram != lastPtogram) {
         Midi::SendPrograme(numberProgram);
     }
@@ -61,7 +61,7 @@ void Song::nextNote(NoteType note, int repetition = 1) {
         break;
     case NoteType::HundredTwentyEighthNote:
         for (int i = 0; i < repetition; i++) {
-            long delaySong = ((60000000 / (bpm * 32)) * numberHundredTwentyEighthNote);
+             long int delaySong = ((60000000 / (bpm * 32)) * numberHundredTwentyEighthNote);
             if ((micros() - startTime) < delaySong) {
                 int breakTime = delaySong - (micros() - startTime);
                 delay(breakTime / 1000);
@@ -74,33 +74,38 @@ void Song::nextNote(NoteType note, int repetition = 1) {
     }
 }
 
-void Song::treadSlide(int time, int valueStart ,int valueEnd) {
-	int rep = (time / TIME_RUN_FOR_TREAD);
-	int decal = (valueStart > valueEnd ? (valueStart - valueEnd) : (valueEnd - valueStart));
+void Song::treadSlide(const long time, const int valueStart , const int valueEnd) {
+
+    long rep = (time / TIME_RUN_FOR_TREAD);
+    const int decal = (valueStart > valueEnd ? (valueStart - valueEnd) : (valueEnd - valueStart));
 	if (rep > decal) {
 		rep = decal;
 	}
-	int pas = decal / rep;
-	int breakTime = ((time / rep) == 0 ? (time / rep) - TIME_RUN_FOR_TREAD : 0);
-	if (valueStart < valueEnd) {
+     const int pas = decal / rep;
+	 const int breakTime = ((time / rep) == 0 ? (time / rep) - TIME_RUN_FOR_TREAD : 0);
+     const long int lastTimerQ = micros();
+     if (valueStart < valueEnd) {
 		for (int i = valueStart; i < valueEnd; i += pas) {
-            Serial.write((uint8_t)0xB0);
-            Serial.write((uint8_t)0x0B);
-            Serial.write((uint8_t)i);
-            delayMicroseconds(breakTime);
+            TreadValueTimer( breakTime, i);
 		}
 	}
 	else {
 		for (int i = valueStart; i > valueEnd; i -= pas) {
-            Serial.write((uint8_t)0xB0);
-            Serial.write((uint8_t)0x0B);
-            Serial.write((uint8_t)i);
-            delayMicroseconds(breakTime);
+            TreadValueTimer( breakTime, i);
 		}
 	}
     lasTreadValue = valueEnd;
 	Midi::SendTreadValue(valueEnd);
 
+}
+
+void Song::TreadValueTimer(int breakTime, int i ) {
+    const long int lastTimer = micros();
+    Midi::SendTreadValue(i);
+    if (micros() - lastTimer < TIME_RUN_FOR_TREAD-30) {
+        breakTime = (TIME_RUN_FOR_TREAD-30 - (micros() - lastTimer)) + breakTime;
+    }
+    delayMicroseconds(breakTime );
 }
 
 void Song::noteUpHundredTwentyEighth() {

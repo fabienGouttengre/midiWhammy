@@ -11,8 +11,7 @@
 #include "./src/led.h"
 #include <Arduino.h>
 
-#include "config.h"
-
+#include "config.h"                      
 
 int programeSelecte = 1;
 void demarragepgrm();
@@ -30,6 +29,7 @@ void setup() {
 
 // the loop function runs over and over again until power down or reset
 void loop() {
+MUSIC_1();
     if (Button::Check(BUTTON_START)) {
         demarragepgrm();
     }

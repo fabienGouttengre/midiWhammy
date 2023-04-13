@@ -69,3 +69,5 @@ test/testSongLoop/ConsoleApplication1/.vs/ConsoleApplication1/v17/.suo
 .vs/ProjectSettings.json
 .vs/slnx.sqlite
 __vm/.midiWhammy.vsarduino.h
+*.json
+.vs/midiWhammy/v17/.wsuo

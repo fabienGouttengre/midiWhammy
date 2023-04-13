@@ -3,140 +3,142 @@
 
 void Map_Of_The_Problematique() {
 	Song* song = new Song(125);
+	long delayA = 3400;
+
 
 	song->nextNote(Song::WholeNote, 1);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_3(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_3(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_3(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_3(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_3(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_4(song);
-	sequence_4(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_2(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
-	sequence_1(song);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_3(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_3(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_3(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_3(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_3(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_4(song, delayA);
+	sequence_4(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_2(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
+	sequence_1(song, delayA);
 
 	//todo minimize code
 	song->sendProgrameTread(8, TREAD_VALUE_MIN);
@@ -144,8 +146,7 @@ void Map_Of_The_Problematique() {
 
 	delete song;
 }
-void sequence_1(Song* &song) {
-	int delayA = 424;
+void sequence_1(Song* &song, long delayA) {
 
 	song->playNote(Song::EighthNote, 8, TREAD_VALUE_MAX);
 	song->playNote(Song::EighthNote, 1, TREAD_VALUE_MIN);
@@ -174,8 +175,7 @@ void sequence_1(Song* &song) {
 
 }
 
-void sequence_2(Song* &song) {
-	int delayA = 424;
+void sequence_2(Song* &song, long delayA) {
 
 	song->playNote(Song::EighthNote, 1, TREAD_VALUE_MAX, delayA);
 	song->playNote(Song::EighthNote, 1, TREAD_VALUE_MIN, delayA);
@@ -204,8 +204,7 @@ void sequence_2(Song* &song) {
 
 }
 
-void sequence_3(Song*& song) {
-	int delayA = 424;
+void sequence_3(Song*& song, long delayA) {
 
 	song->playNote(Song::EighthNote, 1, TREAD_VALUE_MAX, delayA);
 	song->playNote(Song::EighthNote, 1, TREAD_VALUE_MIN, delayA);
@@ -233,8 +232,7 @@ void sequence_3(Song*& song) {
 	song->playNote(Song::EighthNote, 1, TREAD_VALUE_MIN, delayA);
 }
 
-void sequence_4(Song*& song) {
-	int delayA = 424;
+void sequence_4(Song*& song, long delayA) {
 
 	song->playNote(Song::EighthNote, 1, TREAD_VALUE_MAX, delayA);
 	song->playNote(Song::EighthNote, 1, TREAD_VALUE_MIN, delayA);
