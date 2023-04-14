@@ -78,11 +78,24 @@ void Song::treadSlide(const long time, const int valueStart , const int valueEnd
 
     long rep = (time / TIME_RUN_FOR_TREAD);
     const int decal = (valueStart > valueEnd ? (valueStart - valueEnd) : (valueEnd - valueStart));
+    if (time < TIME_RUN_FOR_TREAD * 5) {
+        rep = (time / TIME_RUN_FOR_TREAD);
+        if (rep > 5) {
+            rep = 5;
+        }
+    }
 	if (rep > decal) {
 		rep = decal;
-	}
+    }
      const int pas = decal / rep;
-	 const int breakTime = ((time / rep) == 0 ? (time / rep) - TIME_RUN_FOR_TREAD : 0);
+     int breakTime = 0 ;
+     if (time / rep == 0) {
+         int timeRunForTread = TIME_RUN_FOR_TREAD;
+         if (rep <= 5) {
+             timeRunForTread = LITTLE_TIME_RUN_FOR_TREAD;
+         }
+         breakTime = (time / rep) - timeRunForTread;
+     }
      const long int lastTimerQ = micros();
      if (valueStart < valueEnd) {
 		for (int i = valueStart; i < valueEnd; i += pas) {
