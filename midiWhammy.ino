@@ -24,7 +24,7 @@ void setup() {
 	Led::SetPinModeBoard();
 	Button::SetPin();
 
-	Led::Loop(0);
+	Led::Loop(2);
 }
 
 // the loop function runs over and over again until power down or reset
