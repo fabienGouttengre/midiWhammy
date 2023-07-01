@@ -61,7 +61,7 @@ void Song::nextNote(NoteType note, int repetition = 1) {
         break;
     case NoteType::HundredTwentyEighthNote:
         for (int i = 0; i < repetition; i++) {
-             long int delaySong = ((60000000 / (bpm * 32)) * numberHundredTwentyEighthNote);
+             long int delaySong = ((60000000 / (bpm * 64)) * numberHundredTwentyEighthNote);
             if ((micros() - startTime) < delaySong) {
                 int breakTime = delaySong - (micros() - startTime);
                 delay(breakTime / 1000);
@@ -123,7 +123,7 @@ void Song::TreadValueTimer(int breakTime, int i ) {
 
 void Song::noteUpHundredTwentyEighth() {
     numberHundredTwentyEighthNote++;
-    if (numberHundredTwentyEighthNote % 32 == 0) {
+    if (numberHundredTwentyEighthNote % 64 == 0) {
         Led::Metronome(numberHundredTwentyEighthNote);
     }
 }

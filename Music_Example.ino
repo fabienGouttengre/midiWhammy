@@ -43,6 +43,4 @@ void Music_Example() {
 	//song->playNote({[NoteType], [programNumber], [TREAD VALUE], [delay]);
 	song->playNote(Song::QuarterNote, 8, TREAD_VALUE_MAX, 454);
 
-	
-	//todo completer
 }
